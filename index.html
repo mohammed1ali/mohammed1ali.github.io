@@ -246,6 +246,37 @@ version control, Fabric, Matlab, MS Office. <br/>
     </div>
   </div>
 
+  <div class="b-example-divider"></div>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">EDC Printer for Nusapala Parking Security</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">
+				Programming the Thermal Printer for Printing Tickets and for QR based online payment.<br/>
+        
+      </p>
+
+      <p class="text-black-50"><small>(This is also released through Sunmi App Store, only available on Sunmi Printing Devices.)</small></p>
+
+      
+    </div>
+      <div class="container px-2">
+        <video id="sunmi-video" class="border rounded-3 shadow-lg mb-4 mx-2" controls muted playsinline preload="metadata">
+          <source src="images/sunmi.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+<!-- 
+
+			<div class="container px-5">
+        <img src="images/security1.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4 mx-2" alt="Morning Evening Azkar" width="300" height="400" loading="lazy">
+        <img src="images/security2.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4 mx-2" alt="Morning Evening Azkar" width="300" height="400" loading="lazy">
+        <img src="images/security3.jpeg" class="img-fluid border rounded-3 shadow-lg mb-4 mx-2" alt="Morning Evening Azkar" width="300" height="400" loading="lazy">
+      </div> -->
+
+
+  </div>
+
 
 	<div class="b-example-divider"></div>
 
@@ -613,5 +644,22 @@ Project also involves Android and iPhone app, to be developed soon, InshaAllah.
 			}
 		});
 		</script>
+	<script>
+    const sunmiVideo = document.getElementById("sunmi-video");
+
+    if (sunmiVideo && "IntersectionObserver" in window) {
+      const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sunmiVideo.play().catch(() => {});
+          } else {
+            sunmiVideo.pause();
+          }
+        });
+      }, { threshold: 0 });
+
+      videoObserver.observe(sunmiVideo);
+    }
+	</script>
 </body>
 </html>
